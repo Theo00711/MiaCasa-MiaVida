@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: #2b7de9;
+    --cor-texto: #1a1a1a;
+    --cor-fundo: #ffffff;
+    --cor-fundo-alt: #f0f4f8;
+
+    --fonte-base: 'Segoe UI', Arial, Sans-serif;
+
+    --espaco-xs: 0.5rem;
+    --espaco-sm: 1rem;
+    --espaco-md: 1.5rem;
+    --espaco-lg: 2rem;
+    }
+
+body {
+    font-family: var(--fonte-base);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-heigth: 1.6;
+}
+
+header {
+    background-color: var(--cor-fundo-alt)
+    padding: var(--espaco-md) var(--espaco-lg);
+}
+
+header h1 {
+    color: var(--cor-primaria);
+    margin-bottom: var(--espaco-sm);
+}
+
+nav ul {
+    display: flex;
+    gap: var(--espaco-md);
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--cor-primaria);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-hamburguer {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.menu-nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: var(--espaco-md);
+    list-style: none;
+}
+
+@media (max-width: 768px){
+    .menu-hambuerguer{
+        display: block;
+    }
+
+    .menu-nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--cor-fundo-alt);
+        width: 100%;
+        padding: var(--espaco-md);
+        gap: var(--espaco-sm);
+        transition: all 0.3s ease-in-out;
+    }
+
+
+    .menu-toggle:check ~ .menu-nav ul {
+        display: flex;
+    }
+}
+
+.botao-cta {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+    padding: var(--espaco-xs) var(espaco-md);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: var(--espaco-sm);
+}
+
+.botao-cta:hover {
+    background-color: var(--cor-fundo-alt);
+}
+.campo-valido {...}
+.campo-invalido {...}

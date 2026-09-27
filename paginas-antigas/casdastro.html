@@ -1,0 +1,54 @@
+<div class="form">
+    <form action="#" method="post">
+
+    <!--Informacoes do Usuario-->
+    <fieldset id="Informacoes-do-usuario">
+        <legend>Informacoes para cadastro</legend>
+
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required minlength="3" maxlength="100">
+        
+        <label for="nascimento">Data de nascimento</label>
+        <input type="date" id="nascimento" name="nascimento" required>
+    </fieldset> 
+
+    <!--Informacoes de contato-->
+    <fieldset id="informacoes-de-contato">
+        <legend>Informacoes de contato</legend>
+
+        <label for="numero">Numero de telefone</label>
+        <input type="tel" id="numero" name="numero" pattern="\(\d{2}\) \d{4,5}-\d{4}" placeholder="(00) 00000-0000" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+    </fieldset>
+
+    <!--Preferencias-->
+    <fieldset id="preferencias">
+        <legend>Preferencias</legend>
+
+        <label for="interesse">Area(s) de interesse:</label>
+        <select id="interesse" name="interesse" multiple>
+            <option value="voluntario">Voluntario</option>
+            <option value="doacao">Doacao</option>
+            <option value="adocao">Adocao</option>
+        </select>
+
+        <label>
+            <input type="checkbox" name="novidades">Quero receber novidades por email
+        </label>
+    </fieldset>
+
+    <button type="submit">Enviar cadastro</button>
+    <div class="alerta alerta sucesso" role="alert">
+        Cadastro enviado com sucesso!
+    </div>
+    </form>
+</div>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>MiaCasa MiaVida</title>
+    <link rel="stylesheet" href="style.css">
+</head>
